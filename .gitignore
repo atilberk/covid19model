@@ -43,8 +43,10 @@ stan-models/*.rds
 results/*.Rdata
 results/*.pdf
 results/*.png
+results/*.zip
 figures/*.png
 figures/*.pdf
+figures/*.zip
 Rplots.pdf
 
 
@@ -180,3 +182,6 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .vscode
+
+# Mac
+**/.DS_Store

@@ -5,6 +5,7 @@ library(gdata)
 library(EnvStats)
 
 countries <- c(
+  "Turkey",
   "Denmark",
   "Italy",
   "Germany",
@@ -36,7 +37,7 @@ ifr.by.country$country[ifr.by.country$country == "United Kingdom"] = "United_Kin
 
 serial.interval = read.csv("data/serial_interval.csv")
 covariates = read.csv('data/interventions.csv', stringsAsFactors = FALSE)
-covariates <- covariates[1:11, c(1,2,3,4,5,6, 7, 8)]
+covariates <- covariates[1:12, c(1,2,3,4,5,6, 7, 8)]
 
 ## making all covariates that happen after lockdown to have same date as lockdown
 covariates$schools_universities[covariates$schools_universities > covariates$lockdown] <- covariates$lockdown[covariates$schools_universities > covariates$lockdown]
@@ -57,11 +58,11 @@ if (Sys.getenv("DEBUG") == "TRUE") {
 }
 
 if(DEBUG == FALSE) {
-  N2 = 75 # Increase this for a further forecast
+  N2 = 90 # Increase this for a further forecast
 }  else  {
   ### For faster runs:
   # countries = c("Austria","Belgium") #,Spain")
-  N2 = 75
+  N2 = 90
 }
 # countries = c("Italy","United_Kingdom","Spain","Norway","Austria","Switzerland")
 

@@ -25,7 +25,7 @@ make_forecast_plot <- function(){
   data_interventions <- read.csv("data/interventions.csv", 
                                  stringsAsFactors = FALSE)
   
-  for(i in 1:11){
+  for(i in 1:length(countries)){
     N <- length(dates[[i]])
     N2 <- N + 7
     country <- countries[[i]]
